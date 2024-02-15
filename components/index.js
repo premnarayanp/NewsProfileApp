@@ -1,2 +1,2 @@
-import RecommendedNewsChannel from './RecommendedNewsChannel';
-export { RecommendedNewsChannel };
+import RecommendedChannelCard from './RecommendedChannelCard';
+export { RecommendedChannelCard };
