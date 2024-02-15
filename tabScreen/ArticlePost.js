@@ -1,10 +1,15 @@
-import { Button, Text, View } from 'native-base';
+import { FlatList, View } from 'native-base';
+import { NewsCard } from '../components/index';
+import { articles } from '../constants/index';
 export default function ArticlePost({ navigation }) {
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>ArticlePost Tab</Text>
-
-            <Button title="Go back" onPress={() => navigation.goBack()} />
+        <View p='1'>
+            <FlatList
+                data={articles}
+                renderItem={({ item }) => <NewsCard article={item} />}
+                keyExtractor={item => item.id}
+                showsVerticalScrollIndicator={false}
+            />
         </View>
     );
 }

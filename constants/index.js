@@ -33,4 +33,52 @@ export const recommendedNewsChannel = [{
     recentText: "I will call today.",
     followBy: ["bhupendra@12344", "manisha@646", "aadi@124", "mohan@420"],
     avatarUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU"
-}]
+}];
+
+
+export const articles = [{
+    id: '1',
+    title: 'Funny Funny',
+    summary: 'Summary of the first article...',
+    content: 'A proper article indicates that its noun is proper, and refers to a unique entity. It may be the name of a person, the name of a place, the name of a planet, etc. The Māori language has the proper article a, which is used for personal nouns; so, "a Pita" means "Peter". In Māori, when the personal nouns have the definite or indefinite article as an important part of it, both articles are present; for example, the phrase "a Te Rauparaha", which contains both the proper article a and the definite article Te refers to the person name Te Rauparaha',
+    author: 'Author Name1',
+    publishedDate: '2024-02-01',
+    imageUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+},
+{
+    id: '2',
+    title: 'Funny Funny2',
+    summary: 'Summary of the first article..2.',
+    content: 'The definite article is sometimes also used with proper names, which are already specified by definition (there is just one of them). For example: the Amazon, the Hebrides. In these cases, the definite article may be considered superfluous. Its presence can be accounted for by the assumption that they are shorthand for a longer phrase in which the name is a specifier, i.e. the Amazon River, the Hebridean Islands.[citation needed] Where the nouns in such longer phrases cannot be omitted, the definite article is universally kept: the United States, the People',
+    author: 'Author Name2',
+    publishedDate: '2024-02-04',
+    imageUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+},
+{
+    id: '3',
+    title: 'Funny Funny3',
+    summary: 'Summary of the first article..23',
+    content: 'The definite article is sometimes also used with proper names, which are already specified by definition (there is just one of them). For example: the Amazon, the Hebrides. In these cases, the definite article may be considered superfluous. Its presence can be accounted for by the assumption that they are shorthand for a longer phrase in which the name is a specifier, i.e. the Amazon River, the Hebridean Islands.[citation needed] Where the nouns in such longer phrases cannot be omitted, the definite article is universally kept: the United States, the People',
+    author: 'Author Name3',
+    publishedDate: '2024-02-04',
+    imageUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+},
+{
+    id: '4',
+    title: 'Funny Funny4',
+    summary: 'Summary of the first article...',
+    content: 'The definite article is sometimes also used with proper names, which are already specified by definition (there is just one of them). For example: the Amazon, the Hebrides. In these cases, the definite article may be considered superfluous. Its presence can be accounted for by the assumption that they are shorthand for a longer phrase in which the name is a specifier, i.e. the Amazon River, the Hebridean Islands.[citation needed] Where the nouns in such longer phrases cannot be omitted, the definite article is universally kept: the United States, the People',
+    author: 'Author Name4',
+    publishedDate: '2024-02-01',
+    imageUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+},
+{
+    id: '5',
+    title: 'Funny Funny5',
+    summary: 'Summary of the first article..2.',
+    content: 'The definite article is sometimes also used with proper names, which are already specified by definition (there is just one of them). For example: the Amazon, the Hebrides. In these cases, the definite article may be considered superfluous. Its presence can be accounted for by the assumption that they are shorthand for a longer phrase in which the name is a specifier, i.e. the Amazon River, the Hebridean Islands.[citation needed] Where the nouns in such longer phrases cannot be omitted, the definite article is universally kept: the United States, the People',
+    author: 'Author Name5',
+    publishedDate: '2024-02-04',
+    imageUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+}
+];

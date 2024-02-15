@@ -1,2 +1,3 @@
 import RecommendedChannelCard from './RecommendedChannelCard';
-export { RecommendedChannelCard };
+import NewsCard from './NewsCard';
+export { RecommendedChannelCard, NewsCard };
