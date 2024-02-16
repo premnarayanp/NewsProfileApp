@@ -20,7 +20,7 @@ export default function NewsCard({ navigation, article, isShowCRUD_Icon = true, 
 
 
             <HStack justifyContent="space-between" borderColor="coolGray.300" borderBottomWidth="1" alignItems="center" pl="2" pr="2">
-                <Avatar bg="pink.600" alignSelf="center" size="md" source={{ uri: article.imageUrl }}></Avatar>
+                <Avatar bg="pink.600" alignSelf="center" size="md" source={{ uri: article.avatarUrl }}></Avatar>
                 <Text fontSize="md" bold>{article.author}</Text>
                 {isShowCRUD_Icon && <IconButton icon={<Icon color={CRUD_IconColor} size="md" as={MaterialCommunityIcons} name={CRUD_IconName} />} />}
             </HStack>
