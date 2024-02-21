@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 // import { createDrawerNavigator } from '@react-navigation/drawer';
 
-import { Home, Login, SignUp, Setting, Profile, Notification } from './screens/index';
+import { Home, Login, SignUp, Setting, Profile, Notification } from './src/screens/index';
 
 
 const Tab = createBottomTabNavigator();
