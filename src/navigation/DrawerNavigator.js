@@ -1,11 +1,12 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import BottomTabNavigator from './BottomTabNavigator';
+import CustomDrawer from './CustomDrawer'
 
 const Drawer = createDrawerNavigator();
 const DrawerNavigator = () => {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator drawerContent={(props) => <CustomDrawer {...props} />}>
       <Drawer.Screen
         name="BottomTabNavigator"
         component={BottomTabNavigator}
