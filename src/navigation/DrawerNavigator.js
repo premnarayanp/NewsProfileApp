@@ -12,7 +12,7 @@ const DrawerNavigator = () => {
         component={BottomTabNavigator}
         options={{
           headerShown: true,
-          title: () => null,
+          title: "",//() => null,
           headerRight: (props) => (
             <MaterialCommunityIcons name="dots-vertical" color="gray" size={30} />
           ),
