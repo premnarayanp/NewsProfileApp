@@ -98,6 +98,7 @@ const CustomDrawer = ({ navigation }) => {
                                     bgColor={item.bgColor}
                                     onClick={() => {
                                         navigation.closeDrawer();
+                                        navigation.navigate('SignUp');
                                     }}
                                 />
                             );
