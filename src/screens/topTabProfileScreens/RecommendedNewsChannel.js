@@ -1,6 +1,6 @@
 import { FlatList, View } from 'native-base';
-import { RecommendedChannelCard } from '../components/index';
-import { recommendedNewsChannel } from '../constants/index';
+import { RecommendedChannelCard } from '../../components/index';
+import { recommendedNewsChannel } from '../../constants/index';
 export default function RecommendedNewsChannel({ navigation, channel }) {
     return (
         <View p='1'>

@@ -1,6 +1,6 @@
 import { FlatList, View } from 'native-base';
-import { NewsCard } from '../components/index';
-import { articles } from '../constants/index';
+import { NewsCard } from '../../components/index';
+import { articles } from '../../constants/index';
 export default function ArticlePost({ navigation }) {
     return (
         <View p='1'>

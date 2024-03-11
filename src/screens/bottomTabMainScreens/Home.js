@@ -1,6 +1,6 @@
 import { FlatList, View, NativeBaseProvider } from 'native-base';
-import { NewsCard } from '../components/index';
-import { articles } from '../constants/index';
+import { NewsCard } from '../../components/index';
+import { articles } from '../../constants/index';
 export default function Home({ navigation }) {
   return (
     <NativeBaseProvider>

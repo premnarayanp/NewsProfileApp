@@ -3,7 +3,7 @@ import { NativeBaseProvider, HStack, VStack, Center, Text, Avatar, ScrollView, B
 import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import { ArticlePost, BookMark, LikedPost, RecommendedNewsChannel } from '../tabScreen/index';
+import { ArticlePost, BookMark, LikedPost, RecommendedNewsChannel } from '../topTabProfileScreens/index';
 
 export default function Profile({ navigation }) {
     const Tab = createMaterialTopTabNavigator();

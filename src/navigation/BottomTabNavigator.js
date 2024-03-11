@@ -1,9 +1,8 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Home, Login, SignUp, Setting, Profile, Notification } from '../screens/index';
+import { Home, Profile, Notification } from '../screens/bottomTabMainScreens/index';
 
 const Tab = createBottomTabNavigator();
-
 //----------------------Root Bottom Tab-----------------------------
 const BottomTabNavigator = () => {
     return (
@@ -24,6 +23,7 @@ const BottomTabNavigator = () => {
                     headerShown: false,
                 }}
             />
+
             <Tab.Screen
                 name="Notification"
                 component={Notification}
