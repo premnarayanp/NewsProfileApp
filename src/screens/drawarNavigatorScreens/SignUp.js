@@ -1,12 +1,48 @@
 import { Button, Text, View, TextInput, StyleSheet } from 'react-native';
 import React, { useState } from "react";
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { useDispatch } from 'react-redux';
+import { signUp } from '../../api';
+import { successSignUp } from '../../redux/action/authActions';
 
 export default function SignUp({ navigation }) {
     const [name, setName] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [signingUp, setSigningUp] = useState(false);
+    const dispatch = useDispatch();
+
+    const onSubmit = async () => {
+        setSigningUp(true);
+        let error = false;
+
+        if (!name || !username || !password || !confirmPassword) {
+            //'Please fill all the fields'
+            error = true;
+        }
+
+        if (password !== confirmPassword) {
+            //'Make sure password and confirm password matches'
+            error = true;
+        }
+
+        if (error) {
+            return setSigningUp(false);
+        }
+
+        const response = await signUp(name, username, password, confirmPassword);
+        setSigningUp(false);
+
+        if (response.success) {
+            dispatch(successSignUp({ isSignUpSuccess: true }));
+            //'User registered successfully, please login now'
+            navigation.navigate('Login')
+        } else {
+            //appearance: 'error',
+        }
+    }
+
     return (
         <View style={{ flex: 1, alignItems: 'center', paddingHorizontal: 10 }}>
             <View style={styles.signUpForm}>
@@ -42,8 +78,8 @@ export default function SignUp({ navigation }) {
                     secureTextEntry
                     onChangeText={(text) => setConfirmPassword(text)}
                 />
-                <TouchableOpacity style={styles.signUpBtn}>
-                    <Text style={{ fontSize: 16, color: 'white', fontWeight: 700 }}>SignUp</Text>
+                <TouchableOpacity style={styles.signUpBtn} onPress={() => onSubmit()}>
+                    <Text style={{ fontSize: 16, color: 'white', fontWeight: 700 }}> {signingUp ? 'Signing up...' : 'SignUp'}</Text>
                 </TouchableOpacity>
             </View>
 

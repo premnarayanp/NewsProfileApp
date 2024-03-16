@@ -4,9 +4,21 @@ import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { ArticlePost, BookMark, LikedPost, RecommendedNewsChannel } from '../topTabProfileScreens/index';
+// import { useEffect } from 'react';
+// import { useSelector } from 'react-redux';
 
 export default function Profile({ navigation }) {
     const Tab = createMaterialTopTabNavigator();
+    //const auth = useSelector((state) => state.authReducer);
+
+    // useEffect(() => {
+    //     function fetchData() {
+    //         if (!auth.user) {
+    //             navigation.getParent().navigate("Login", { data: 'Login' })
+    //         }
+    //     }
+    //     fetchData();
+    // }, []);
 
     return (
         <NativeBaseProvider>

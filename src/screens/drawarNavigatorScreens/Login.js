@@ -1,10 +1,48 @@
-import { Button, Text, View, TextInput, StyleSheet } from 'react-native';
+import { Button, Text, View, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import React, { useState } from "react";
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { login } from '../../api';
+import { successLogin } from '../../redux/action/authActions';
+import { setItemInLocalStorage, removeItemFromLocalStorage, getItemFromLocalStorage } from '../../utils/index';
+import { CommonActions } from '@react-navigation/native';
+import { LOCAL_STORAGE_TOKEN_KEY } from '../../utils/constants';
+import { useDispatch } from 'react-redux';
 
 export default function Login({ navigation }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [signingUp, setSigningUp] = useState('');
+    const dispatch = useDispatch();
+
+    const onSubmit = async () => {
+        setSigningUp(true);
+        let error = false;
+
+        if (!username || !password) {
+            //'Please fill all the fields'
+            error = true;
+        }
+
+        if (error) {
+            return setSigningUp(false);
+        }
+
+        const response = await login(username, password);
+        setSigningUp(false);
+        // console.log('------response-----', response);
+        if (response.success) {
+            setItemInLocalStorage(
+                LOCAL_STORAGE_TOKEN_KEY,
+                response.data.token ? response.data.token : null
+            );
+            dispatch(successLogin({ isLoginSuccess: true, user: response.data.user }));
+            //'User registered successfully, please login now'
+            //navigation.dispatch(CommonActions.navigate('Home'));
+        } else {
+            //appearance: 'error',
+        }
+    }
+
+
     return (
         <View style={{ flex: 1, alignItems: 'center', paddingHorizontal: 10 }}>
             <View style={styles.loginForm}>
@@ -23,8 +61,8 @@ export default function Login({ navigation }) {
                     secureTextEntry
                     onChangeText={(text) => setPassword(text)}
                 />
-                <TouchableOpacity style={styles.loginBtn}>
-                    <Text style={{ fontSize: 16, color: 'white', fontWeight: 700 }}>Login</Text>
+                <TouchableOpacity style={styles.loginBtn} onPress={() => onSubmit()}>
+                    <Text style={{ fontSize: 16, color: 'white', fontWeight: 700 }}> {signingUp ? 'Signing...' : 'Login'}</Text>
                 </TouchableOpacity>
             </View>
 
