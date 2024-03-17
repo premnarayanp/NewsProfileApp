@@ -61,3 +61,17 @@ export const signUp = async (name, email, password, confirmPassword) => {
     body: { name, email, password, confirmPassword: confirmPassword },
   });
 };
+
+export const topHeadLineNews = async () => {
+  return customFetch(API_URLS.topHeadLineNews(), {
+    method: 'GET',
+  });
+};
+
+export const allNews = async () => {
+  return customFetch(API_URLS.allNews(), {
+    method: 'GET',
+  });
+};
+
+
