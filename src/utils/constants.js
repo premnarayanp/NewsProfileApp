@@ -1,6 +1,6 @@
 //const API_ROOT = 'http://localhost:8361/';
 //const API_ROOT = 'https://news-api.onrender.com';
-const API_ROOT = 'http://192.168.35.253:8361';
+const API_ROOT = 'http://192.168.159.253:8361';
 export const API_URLS = {
   //API URL for User
   login: () => `${API_ROOT}/users/login`,

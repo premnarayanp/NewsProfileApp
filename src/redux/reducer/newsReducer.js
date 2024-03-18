@@ -2,8 +2,8 @@ import { ADD_TOP_HEADING_NEWS_LIST, ADD_ALL_NEWS_LIST } from "../action/actionTy
 
 
 const initialAuthState = {
-    topHeadLineNews: {},
-    allNews: {},
+    topHeadLineNews: { articles: [] },
+    allNews: { articles: [] },
 };
 
 export default function newsReducer(state = initialAuthState, action) {
